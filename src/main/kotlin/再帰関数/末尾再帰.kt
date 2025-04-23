@@ -1,5 +1,7 @@
 package org.example.再帰関数
 
+import com.sun.jdi.IntegerType
+
 /*
  問題：フィボナッチ数列（末尾再帰バージョン）
 
@@ -76,8 +78,20 @@ tailrec fun reverseListHelper(
  - 累積変数（accumulator）を使って実装すること
 */
 
+fun digitSum(num: Int): Int {
+    val chsngeNum = num.toString()
+    return digitSumHelper(chsngeNum.length - 1, chsngeNum, 0)
+}
 
-
+tailrec fun digitSumHelper(length: Int, str: String, sum: Int): Int {
+    if (length == -1) return sum
+    val char = str[length]
+    return digitSumHelper(
+        length - 1,
+        str,
+        sum + Integer.parseInt(char.toString())
+    )
+}
 
 fun main() {
     val result1 = fibonacci(5)
@@ -85,5 +99,8 @@ fun main() {
 
     val result2 = reverseList(listOf(1, 2, 3, 4))
     println(result2)
+
+    val n = 1234
+    println(digitSum(n)) // 出力: 10
 }
 
