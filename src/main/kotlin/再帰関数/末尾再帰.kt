@@ -93,6 +93,21 @@ tailrec fun digitSumHelper(length: Int, str: String, sum: Int): Int {
     )
 }
 
+/*
+ 問題：最大公約数（GCD）の計算（再帰）
+
+ 2つの正の整数 a, b を受け取り、その最大公約数（GCD）を返す関数を
+ 再帰を使って実装してください。
+
+ 例：
+   gcd(48, 18) → 6
+
+ 条件：
+ - tailrec を使っても使わなくてもOK（ただし tailrec を使えるなら使ってみてください）
+ - 関数名は gcd とすること
+ - ユークリッドの互除法を使うこと
+*/
+
 fun main() {
     val result1 = fibonacci(5)
     println(result1)
