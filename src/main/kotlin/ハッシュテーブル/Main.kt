@@ -28,6 +28,9 @@ fun main() {
     scoreRecord["Yui"] = 92
     scoreRecord["Sota"] = 78
 
+    val listA = ArrayList<String>()
+    println(listA.size)
+
     var inputName: String
     while (true) {
         println("名前を入力してください（endで終了）:")
