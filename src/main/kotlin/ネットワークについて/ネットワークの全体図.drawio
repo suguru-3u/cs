@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram name="ページ1" id="Pi0BSQmRqDefz1QZh_30">
+    <mxGraphModel dx="1252" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-2" value="クライアント" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-3" value="サーバー" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-5" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;①サーバーにアクセス&lt;br&gt;しようとるする&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="155" y="120" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-6" value="リクエスト対象のIPアドレスを管理する&lt;br&gt;DNSサーバー" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="470" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="01_e_fxqBLR3VYLmdFnX-18" target="01_e_fxqBLR3VYLmdFnX-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="340" as="sourcePoint" />
+            <mxPoint x="380" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-9" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;②URLからIPアドレスを取得する&lt;br&gt;クライアントのリゾルバがURLの末尾、.comなどからサクセスして先頭のアドレスを管理しているDNSサーバーからIPアドレスを取得する&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="270" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;③TCP or UDPで接続する&lt;br&gt;TCPは3ウェイハンドシェイクを行い&lt;br&gt;UDPはとにかくデータを送信する&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="492" y="140" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-13" value="認証局（CA）" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="470" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-15" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;④HTTPS（TLS）通信を行うために接続確認&lt;span style=&quot;background-color: transparent;&quot;&gt;を行う&lt;/span&gt;&lt;br&gt;目的：&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;①盗聴を防ぐ&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;②改ざんを防ぐ&lt;br&gt;③なりすましを防ぐ&lt;br&gt;公開鍵暗号を使い共有する対象鍵を安全に受け渡す仕組み。&lt;br&gt;TCPでの接続が完了した後に以下の流れで通信を行う。&lt;br&gt;&lt;/font&gt;&lt;pre style=&quot;box-sizing: border-box; margin-top: 16px; margin-bottom: 16px; font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 1.45; font-family: &amp;quot;JetBrains Mono&amp;quot;, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; padding: 16px; overflow: auto; border-radius: 3px; background-color: rgba(212, 222, 231, 0.098);&quot; class=&quot;code-fence&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-variant: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: inherit; font-family: &amp;quot;JetBrains Mono&amp;quot;, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; padding: 0px; margin: 0px; border-radius: 3px; background: transparent; word-break: normal; border: 0px; display: inline; max-width: initial; overflow: initial; overflow-wrap: normal;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;1. クライアント →「これらの暗号方式に対応してます」&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;2. サーバ     →「これを使いましょう + 私の証明書です」&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;3. クライアント: 証明書を CA のリストと照合して &quot;本物か&quot; 検証&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;4. 双方で、以降使う対称鍵を安全に取り決める&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;5. 「準備OK」&lt;/span&gt;&lt;/font&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;対称鍵はクライアント側で作成してサーバーの公開鍵を&lt;br&gt;使用して暗号化し、サーバーは秘密鍵を用いて対称鍵を&lt;br&gt;取得する&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="492" y="270" width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-18" value="自宅ルーター&lt;br&gt;兼NAT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="180" width="74" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-19" value="外部ルーター" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="180" width="74" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" target="01_e_fxqBLR3VYLmdFnX-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="sourcePoint" />
+            <mxPoint x="380" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="01_e_fxqBLR3VYLmdFnX-18" target="01_e_fxqBLR3VYLmdFnX-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="250" as="sourcePoint" />
+            <mxPoint x="380" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="01_e_fxqBLR3VYLmdFnX-19" target="01_e_fxqBLR3VYLmdFnX-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="180" as="sourcePoint" />
+            <mxPoint x="516" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-25" value="com、jp、orgなどの&lt;br&gt;トップレベルドメインのDNSサーバー" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="362" y="330" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="01_e_fxqBLR3VYLmdFnX-25" target="01_e_fxqBLR3VYLmdFnX-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="370" as="sourcePoint" />
+            <mxPoint x="380" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="01_e_fxqBLR3VYLmdFnX-13" target="01_e_fxqBLR3VYLmdFnX-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="380" as="sourcePoint" />
+            <mxPoint x="380" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-29" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;認証局はサーバーが本物であると署名した証明書を発行して、サーバーが証明書を保持している&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="840" y="310" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="01_e_fxqBLR3VYLmdFnX-30" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;補足：DNSやTCP、TLSの接続後はキャッシュなどを一定期間持ち通信の度にすべての工程を行わなくてもよくしている&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="630" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
