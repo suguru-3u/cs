@@ -1,0 +1,27 @@
+# docker-compose.yml
+services:
+  cs-mysql:
+    image: mysql:8.4
+    container_name: cs-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: cs_study
+      TZ: Asia/Tokyo
+    ports:
+      - "6606:3306"
+    command:
+      - --slow_query_log=ON
+      - --long_query_time=0.1          # 0.1秒超えたら記録(第9章で使う)
+      - --slow_query_log_file=/var/lib/mysql/slow.log
+      - --log_bin=binlog               # 第7章のレプリケーションで使う
+      - --binlog_format=ROW
+      - --innodb_buffer_pool_size=128M # わざと小さめ。第3章でキャッシュミスを観察するため
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-prootpass" ]
+      interval: 5s
+      retries: 20
+
+volumes:
+  mysql-data:
